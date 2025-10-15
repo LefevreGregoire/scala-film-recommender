@@ -1,0 +1,18 @@
+# Fichiers compilés
+target/
+project/target/
+
+# Metals (IDE Scala)
+.metals/
+.bsp/
+
+# IDE
+.idea/
+.vscode/
+*.iml
+
+# OS
+.DS_Store
+
+# Logs
+*.log
