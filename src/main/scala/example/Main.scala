@@ -53,6 +53,52 @@ object MainInteractiveV9Friendly:
   // Structure: Map[nomUtilisateur, Map[titreFilm, note]]
   val ratings = mutable.Map[String, mutable.Map[String, Double]]()
 
+  // Initialiser avec quelques utilisateurs fictifs pour avoir des données de base
+  def initializeFakeUsers(): Unit =
+    ratings("Alice") = mutable.Map(
+      "Inception" -> 5.0,
+      "Matrix" -> 4.5,
+      "Interstellar" -> 5.0,
+      "The Dark Knight" -> 4.0,
+      "Pulp Fiction" -> 4.5,
+      "The Godfather" -> 5.0,
+      "Get Out" -> 3.5,
+      "Superbad" -> 4.0
+    )
+    
+    ratings("Bob") = mutable.Map(
+      "Avatar" -> 3.0,
+      "Star Wars: A New Hope" -> 5.0,
+      "Blade Runner 2049" -> 4.0,
+      "Mad Max: Fury Road" -> 4.5,
+      "Die Hard" -> 5.0,
+      "Se7en" -> 4.0,
+      "It" -> 3.0,
+      "The Hangover" -> 4.5
+    )
+    
+    ratings("Charlie") = mutable.Map(
+      "Jurassic Park" -> 4.5,
+      "The Martian" -> 4.0,
+      "Arrival" -> 4.5,
+      "Avengers: Endgame" -> 5.0,
+      "John Wick" -> 4.5,
+      "Goodfellas" -> 5.0,
+      "A Quiet Place" -> 4.0,
+      "Mean Girls" -> 3.5
+    )
+    
+    ratings("Diana") = mutable.Map(
+      "Minority Report" -> 3.5,
+      "Terminator 2: Judgment Day" -> 4.5,
+      "Mission Impossible: Fallout" -> 4.0,
+      "Casino Royale" -> 4.5,
+      "The Bourne Identity" -> 4.0,
+      "The Conjuring" -> 3.5,
+      "Halloween" -> 3.0,
+      "Forrest Gump" -> 5.0
+    )
+
   // --- Normalisation catégorie ---
   // Convertit les noms de catégories en français vers l'anglais standardisé
   def normalizeCategory(input: String): String =
@@ -101,6 +147,9 @@ object MainInteractiveV9Friendly:
 
   // --- Interaction ---
   def main(args: Array[String]): Unit =
+    // Initialiser les utilisateurs fictifs pour avoir des données de base
+    initializeFakeUsers()
+    
     println("Bienvenue ! Quel est ton nom ?")
     val user = readLine().trim
     if !ratings.contains(user) then ratings(user) = mutable.Map()
