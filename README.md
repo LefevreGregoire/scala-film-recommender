@@ -1,10 +1,10 @@
 # Système de Recommandation de Films en Scala
 
-Un petit projet de recommandation de films fait en Scala 3 pour apprendre le langage.
+Petit projet de recommandation de films fait en Scala 3.
 
 ## Description
 
-C'est une application en ligne de commande qui recommande des films selon tes goûts. Tu notes quelques films et elle te propose d'autres films que tu pourrais aimer. J'ai utilisé une approche simple de filtrage collaboratif.
+Application en ligne de commande qui recommande des films selon tes goûts.
 
 ## Fonctionnalités
 
@@ -15,10 +15,10 @@ C'est une application en ligne de commande qui recommande des films selon tes go
 
 ## Installation
 
-Il faut avoir Scala 3 et SBT installés.
+Scala 3 et SBT
 
 ```bash
-git clone <ton-repo-url>
+git clone https://github.com/LefevreGregoire/scala-film-recommender
 cd scala-recommender
 sbt compile
 ```
@@ -65,21 +65,6 @@ Matrix : 5
 ```bash
 sbt test
 ```
-
-## Ce que j'ai appris
-
-- Syntaxe de Scala 3 (indentation au lieu des accolades)
-- Collections mutables et immutables
-- Pattern matching
-- Programmation fonctionnelle
-- Tests avec munit
-
-## Améliorations possibles
-
-- Meilleur algorithme de recommandation (similitude cosinus)
-- Sauvegarder les données utilisateur
-- Plus de métadonnées sur les films (année, réalisateur, acteurs)
-- Interface web
 
 ## Licence
 
