@@ -11,6 +11,7 @@ object MainInteractiveV9Friendly:
   case class Film(title: String, category: String)
 
   val films = List(
+    // Science Fiction
     Film("Avatar", "Science Fiction"),
     Film("Inception", "Science Fiction"),
     Film("Matrix", "Science Fiction"),
@@ -21,6 +22,13 @@ object MainInteractiveV9Friendly:
     Film("Blade Runner 2049", "Science Fiction"),
     Film("Arrival", "Science Fiction"),
     Film("Minority Report", "Science Fiction"),
+    Film("Dune", "Science Fiction"),
+    Film("Ex Machina", "Science Fiction"),
+    Film("Alien", "Science Fiction"),
+    Film("E.T.", "Science Fiction"),
+    Film("The Fifth Element", "Science Fiction"),
+    
+    // Action
     Film("Gladiator", "Action"),
     Film("The Dark Knight", "Action"),
     Film("Avengers: Endgame", "Action"),
@@ -31,22 +39,61 @@ object MainInteractiveV9Friendly:
     Film("The Bourne Identity", "Action"),
     Film("Terminator 2: Judgment Day", "Action"),
     Film("Mission Impossible: Fallout", "Action"),
+    Film("The Raid", "Action"),
+    Film("Kill Bill", "Action"),
+    Film("Logan", "Action"),
+    Film("Edge of Tomorrow", "Action"),
+    Film("Kingsman", "Action"),
+    
+    // Horreur
     Film("Get Out", "Horreur"),
     Film("It", "Horreur"),
     Film("A Quiet Place", "Horreur"),
     Film("The Conjuring", "Horreur"),
     Film("Halloween", "Horreur"),
+    Film("The Shining", "Horreur"),
+    Film("Hereditary", "Horreur"),
+    Film("The Witch", "Horreur"),
+    Film("Scream", "Horreur"),
+    Film("28 Days Later", "Horreur"),
+    
+    // Comédie
     Film("Superbad", "Comédie"),
     Film("Step Brothers", "Comédie"),
     Film("The Hangover", "Comédie"),
     Film("Mean Girls", "Comédie"),
+    Film("Bridesmaids", "Comédie"),
+    Film("The Grand Budapest Hotel", "Comédie"),
+    Film("21 Jump Street", "Comédie"),
+    Film("Anchorman", "Comédie"),
+    Film("Zombieland", "Comédie"),
+    Film("Hot Fuzz", "Comédie"),
+    
+    // Drama
     Film("Forrest Gump", "Drama"),
     Film("Good Will Hunting", "Drama"),
     Film("The Green Mile", "Drama"),
+    Film("Schindler's List", "Drama"),
+    Film("The Shawshank Redemption", "Drama"),
+    Film("12 Years a Slave", "Drama"),
+    Film("Whiplash", "Drama"),
+    Film("Manchester by the Sea", "Drama"),
+    Film("Moonlight", "Drama"),
+    Film("A Beautiful Mind", "Drama"),
+    
+    // Crime
     Film("Pulp Fiction", "Crime"),
     Film("The Godfather", "Crime"),
     Film("Se7en", "Crime"),
-    Film("Goodfellas", "Crime")
+    Film("Goodfellas", "Crime"),
+    Film("The Departed", "Crime"),
+    Film("Heat", "Crime"),
+    Film("Reservoir Dogs", "Crime"),
+    Film("The Usual Suspects", "Crime"),
+    Film("No Country for Old Men", "Crime"),
+    Film("Scarface", "Crime"),
+    Film("American Gangster", "Crime"),
+    Film("Casino", "Crime")
   )
 
   // Map pour stocker les notes de chaque utilisateur
@@ -63,7 +110,12 @@ object MainInteractiveV9Friendly:
       "Pulp Fiction" -> 4.5,
       "The Godfather" -> 5.0,
       "Get Out" -> 3.5,
-      "Superbad" -> 4.0
+      "Superbad" -> 4.0,
+      "The Departed" -> 4.5,
+      "Heat" -> 4.0,
+      "Dune" -> 4.5,
+      "The Shawshank Redemption" -> 5.0,
+      "Whiplash" -> 4.5
     )
     
     ratings("Bob") = mutable.Map(
@@ -74,7 +126,12 @@ object MainInteractiveV9Friendly:
       "Die Hard" -> 5.0,
       "Se7en" -> 4.0,
       "It" -> 3.0,
-      "The Hangover" -> 4.5
+      "The Hangover" -> 4.5,
+      "Reservoir Dogs" -> 4.5,
+      "No Country for Old Men" -> 4.0,
+      "Alien" -> 4.5,
+      "Kill Bill" -> 4.0,
+      "The Shining" -> 3.5
     )
     
     ratings("Charlie") = mutable.Map(
@@ -85,7 +142,13 @@ object MainInteractiveV9Friendly:
       "John Wick" -> 4.5,
       "Goodfellas" -> 5.0,
       "A Quiet Place" -> 4.0,
-      "Mean Girls" -> 3.5
+      "Mean Girls" -> 3.5,
+      "The Usual Suspects" -> 4.5,
+      "Scarface" -> 3.5,
+      "Ex Machina" -> 4.0,
+      "The Grand Budapest Hotel" -> 4.5,
+      "Hereditary" -> 3.0,
+      "Schindler's List" -> 5.0
     )
     
     ratings("Diana") = mutable.Map(
@@ -96,7 +159,14 @@ object MainInteractiveV9Friendly:
       "The Bourne Identity" -> 4.0,
       "The Conjuring" -> 3.5,
       "Halloween" -> 3.0,
-      "Forrest Gump" -> 5.0
+      "Forrest Gump" -> 5.0,
+      "American Gangster" -> 4.0,
+      "Casino" -> 4.5,
+      "E.T." -> 4.0,
+      "Logan" -> 4.5,
+      "Bridesmaids" -> 3.5,
+      "Good Will Hunting" -> 4.5,
+      "The Witch" -> 3.0
     )
 
   // --- Normalisation catégorie ---
